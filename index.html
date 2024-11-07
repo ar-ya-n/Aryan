@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" id="logo" class="logo" style="font-size: 35px;">LandLife Foundation</a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </header>
+
+    <section class="parallax">
+        <h1 id="title">Soil Erosion</h1><br>
+        <div id="title_h3">
+            <h3 id="title1">Soil erosion affects food security, biodiversity, and climate stability. 
+                Over 33% of our planet's soil is already degraded, with an area the size of Portugal lost each year. 
+                Soil supports 95% of our food production and absorbs more carbon than forests yet it's rapidly disappearing.
+            </h3>
+        </div>
+        <img src="bg1.png" style="background-position:center; margin-bottom: 20px;  " id="cover" alt="cover" >
+    </section>
+
+    <section class="blog">
+        <h2>Major areas that are impacted by soil erosion</h2>
+        <p>Soil erosion depletes fertile topsoil, leading to reduced agricultural productivity, 
+            impacts water quality by increasing sedimentation in rivers and lakes, and damages infrastructure in affected areas. 
+            It also disrupts ecosystems by destroying habitats and contributing to desertification, especially in vulnerable regions like coastlines 
+            and mountain slopes.
+        </p>
+        <h3>Some major affected areas</h3>
+
+
+        <div class="cards">
+            <div class="card" id="card-left">
+                <img src="image_home_1.jpg" alt="Loess Plateau, China">
+                <div class="overlay">
+                    <h4 id="card1"><a href="https://en.wikipedia.org/wiki/Loess_Plateau"> Plateau, China</a></h4>
+                    <p>
+                        The Loess Plateau in China has faced extreme soil erosion, which degraded its productivity. 
+                        Conservation projects have since revitalized the area, turning it into sustainable farmland.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image_home_4.jpg" alt="Endless Adventures" />
+                <div class="overlay">
+                    <h4><a href="https://en.wikipedia.org/wiki/Midwestern_United_States"> Midwestern United States</a></h4>
+                    <p>The Midwestern United States experiences significant soil erosion due to intensive farming and rainfall runoff. Conservation practices like cover cropping and no-till farming aim to reduce erosion and improve soil health.</p>
+                </div>
+            </div>
+
+            <div class="card" id="card-right">
+                <img src="image_home_2.jpg" alt="The Sahel Region, Africa">
+                <div class="overlay">
+                    <h4><a href="https://en.wikipedia.org/wiki/Sahel">The Sahel, Africa</a></h4>
+                    <p>The Sahel region in Africa is severely affected by soil erosion, primarily due to drought, overgrazing, 
+                        and deforestation, which degrade the soil and reduce its fertility. 
+                        This erosion has led to desertification and threatens agriculture, impacting food security for millions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card" id="card-left">
+                <img src="image_home_5.jpg" alt="Himalayan Foothills, India and Nepal" />
+                <div class="overlay">
+                    <h4><a href="http://www.geo.cornell.edu/geology/research/derry/himalaya.html"> Foothills, India and Nepal </a></h4>
+                    <p>The Himalayan Foothills in India and Nepal are prone to soil erosion from steep slopes and heavy monsoon rains. 
+                        Reforestation and terracing efforts aim to mitigate this issue and preserve soil fertility.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image_home_6.jpg" alt="East African Highlands" >
+                <div class="overlay">
+                    <h4><a href="https://en.wikipedia.org/wiki/Eastern_Highlands"> African Highlands</a></h4>
+                    <p>The East African Highlands experience significant soil erosion from steep slopes and deforestation. 
+                        Agroforestry and terracing are key strategies to help reduce erosion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" id="card-right">
+                <img src="image_home_7.jpg" alt="Australian Rangelands" />
+                <div class="overlay">
+                    <h4><a href="https://en.wikipedia.org/wiki/Rangeland">Australian Rangelands</a></h4>
+                    <p>
+                        The Australian Rangelands suffer soil erosion from overgrazing and drought. Sustainable grazing practices help reduce this impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="news">
+    <div id="newsletter">
+        <form action="">
+            <input type="text" name="name" class="formStyle" placeholder="Name (required)" required />
+            <input type="email" name="email" class="formStyle" placeholder="Email (required)" required />
+            <a href="#" class="formButton">Subscribe</a>
+        </form>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+    <script>
+        let split = new SplitText("#title");
+
+        gsap.from("#cover", {
+            scrollTrigger: {
+                scrub: true,
+            },
+            y: 80,
+        });
+
+        gsap.from("#leftfish", {
+            scrollTrigger: {
+                scrub: true,
+            },
+            x: -150,
+        });
+
+        gsap.from("#rightfish", {
+            scrollTrigger: {
+                scrub: true,
+            },
+            x: 200,
+        });
+
+        gsap.from("#card-left", {
+            scrollTrigger: {
+                scrub: true,
+            },
+            x: -250,
+        });
+
+        gsap.from("#card-right", {
+            scrollTrigger: {
+                scrub: true,
+            },
+            x: 250,
+        });
+
+        gsap
+            .timeline({
+                scrollTrigger: {
+                    trigger: ".parallax",
+                    start: "top 70%",
+                    end: "bottom top",
+                    toggleActions: "restart none none reset",
+                },
+            })
+            .from(split.chars, {
+                yPercent: -250,
+                stagger: 0.08,
+                duration: 0.7,
+                ease: "back",
+            })
+            .from(split.chars, { opacity: 0, delay: 0.05, stagger: 0.05, duration: 0.2 }, 0);
+
+
+
+        function test() {
+            var a = 1;
+            if (true) {
+                var a = 2;
+                console.log(a);
+            }
+            console.log(a);
+        }
+        test();
+
+
+    </script>
+</body>
+
+</html>
